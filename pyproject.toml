@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calidad_pqrs"
+version = "0.1.0"
+description = "Sistema de clasificación de procesos y causas para PQRS de salud"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "Felipe Aricapa" }
+]
+
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "spacy",
+    "unidecode",
+    "scipy",
+    "openpyxl",
+    "pyarrow",
+    "optuna",
+]
+
+[project.optional-dependencies]
+train = [
+    "matplotlib",
+    "umap-learn",
+]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-mock>=3.12.0",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
