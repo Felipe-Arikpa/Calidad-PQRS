@@ -253,6 +253,7 @@ Output/monitoring/*.parquet
 *.temp
 experiments/
 checkpoints/
+Homework/pruebilla.ipynb
 
 # Optuna database
 optuna.db

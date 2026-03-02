@@ -1,17 +1,17 @@
 # CALIDAD PQRS
 
-Sistema de clasificación automática y validación de calidad para quejas de la capacidad de salud.
+Sistema de clasificación automática para la validación de calidad en la tipificación de la causa y el proceso en las quejas de la capacidad de salud.
 
 ## Descripción
 
-Este proyecto implementa modelos de machine learning para:
-- Clasificar automáticamente PQRS en **Procesos** y **Causas**
-- Validar la calidad de tipificaciones existentes
+Este proyecto implementa modelos de ML para:
+- Clasificar automáticamente **Procesos** y **Causas** de las PQRS
+- Contrastar versus las tipificaciones existentes
 - Generar alertas sobre clasificaciones con alta probabilidad de error
 
 El sistema utiliza dos modelos de Regresión Logística con TF-IDF que trabajan de manera secuencial:
 1. **Modelo de Procesos**: Clasifica la queja en uno de los procesos principales
-2. **Modelo de Causas**: Clasifica la causa específica considerando el proceso predicho
+2. **Modelo de Causas**: Clasifica la causa específica considerando adicional al contexto documentado, el proceso predicho con el modelo anterior.
 
 ## 🗂️ Estructura del Proyecto
 
